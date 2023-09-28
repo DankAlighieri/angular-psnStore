@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { dataFake } from '../../data/dataFake';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit(): void {
-  }
+  gameCover:string = ''
+  gameLabel:string = '';
+  gameType:string = '';
+  gamePrice:string = '';
+  private id:string | null = '0';
 
+  constructor(private route:ActivatedRoute) { }
+
+  ngOnInit(): void {}
 }
